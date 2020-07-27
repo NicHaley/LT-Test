@@ -1,10 +1,28 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
+    "baseUrl": "./src",
     "jsx": "react",
-    "allowJs": true
-  }
+    "target": "esnext",
+    "module": "esnext",
+    "allowJs": true,
+    "outDir": "./built",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "paths": {
+      "src/*": ["*"],
+      "test/*": ["../test/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "sourceRoot": "/"
+  },
+  "include": [
+    "./src/**/*",
+    "./test/**/*",
+    "global.d.ts"
+  ],
+  "exclude": ["node_modules"]
 }
