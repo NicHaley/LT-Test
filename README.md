@@ -1,4 +1,4 @@
-# Code for Canada Technical Challenge
+# LambdaTest IE11 Test Project
 
 ## Setup
 To start run:
