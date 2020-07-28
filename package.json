@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --watch --hot --disable-host-check",
     "selenium": "jest --projects jest-selenium.config.js",
     "ci": "start-server-and-test start http-get://localhost:8080 selenium"
   },
