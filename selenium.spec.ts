@@ -27,9 +27,9 @@ const capabilities = {
   visual: true,
   console: true,
   video: true,
-  name: "Selenium Tests",
+  name: "Test Project Selenium Tests",
   acceptSslCerts: true,
-  build: `Chat - ${commitHash}`
+  build: `Test IE11 - ${commitHash}`
 };
 
 const DEFAULT_TIMEOUT = 60000;
