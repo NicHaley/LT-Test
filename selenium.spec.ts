@@ -19,8 +19,8 @@ const commitHash = childProcess.execSync("git rev-parse --short HEAD").toString(
 
 const capabilities = {
   platform: "windows 10",
-  browserName: "chrome",
-  version: "67.0",
+  browserName: "ie",
+  version: "11.0",
   resolution: "1024x768",
   tunnel: true,
   network: false,
@@ -60,10 +60,8 @@ describe("run a test", () => {
   }, DEFAULT_TIMEOUT);
 
   it("SHOULD load and render the UI with standard elements", async () => {
-    const messageList = await getElementById(driver, "messages-list");
-    const inputBar = await getElementById(driver, "input-bar");
+    const header = await getElementById(driver, "header");
 
-    expect(messageList).not.toBeNull();
-    expect(inputBar).not.toBeNull();
+    expect(header).not.toBeNull();
   });
 });
