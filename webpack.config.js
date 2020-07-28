@@ -24,6 +24,9 @@ module.exports = {
   },
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist")
-  }
+    publicPath: "/",
+    path: path.resolve(__dirname, "dist"),
+    chunkFilename: "[name].bundle.js"
+  },
+  devtool: "inline-source-map"
 };
