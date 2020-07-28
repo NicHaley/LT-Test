@@ -1,7 +1,17 @@
 version: 2.1
 orbs:
-    hello: circleci/hello-build@0.0.5
+  lambdatest: lambdatest/lambda-tunnel@1.0.4
 workflows:
-    "Hello Workflow":
-        jobs:
-          - hello/hello-build
+  test-workflow:
+    jobs:
+      - lambdatest/with_tunnel:
+          name: TEST test
+          tunnel_name: test-selenium-tests
+          lambdatest_email: nic@ada.support
+          lambdatest_key: LAMBDA_TEST_KEY
+          steps:
+            - run:
+                command: |
+                  yarn
+                  export LAMBDATEST_USERNAME=$LAMBDA_TEST_USER
+                  yarn ci

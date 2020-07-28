@@ -22,7 +22,8 @@
   "include": [
     "./src/**/*",
     "./test/**/*",
-    "global.d.ts"
+    "global.d.ts",
+    "selenium.spec.ts"
   ],
   "exclude": ["node_modules"]
 }
