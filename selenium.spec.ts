@@ -23,7 +23,7 @@ const capabilities = {
   version: "11.0",
   resolution: "1024x768",
   tunnel: true,
-  network: false,
+  network: true,
   visual: true,
   console: true,
   video: true,
