@@ -60,7 +60,7 @@ describe("run a test", () => {
   }, DEFAULT_TIMEOUT);
 
   it("SHOULD load and render the UI with standard elements", async () => {
-    const header = await getElementById(driver, "header");
+    const header = await getElementById(driver, "test-node");
 
     expect(header).not.toBeNull();
   });
